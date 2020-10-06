@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(express.static(PUBLIC_DIR));
 
 app.get('api/products/questions/sort/:sort', (req, res) => {
-  res.redirect(`http://localhost:3001${req.baseUrl}`);
+  res.redirect(`http://localhost:3001/bundle.js${req.baseUrl}`);
   console.log('success');
 });
 
