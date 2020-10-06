@@ -4,8 +4,13 @@ const app = express();
 
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 
-const PORT = 3001;
+const PORT = 3000;
 app.use(express.static(PUBLIC_DIR));
+
+app.get('api/products/questions/sort/:sort', (req, res) => {
+  res.redirect(`http://localhost:3001${req.baseUrl}`);
+  console.log('success');
+});
 
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
