@@ -1,4 +1,4 @@
-FROM node: 12.18.4
+FROM node:12.18.4
 
 RUN mkdir -p /src/app
 
@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE 3002
 
-CMD [ "npm", "run", " " ]
+CMD [ "npm", "run", "start" ]
