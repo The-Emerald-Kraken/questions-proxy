@@ -41,7 +41,7 @@ app.get('/api/products/:id', (req, res) => {
 
 app.get('/api/products/:id/relatedItems', (req, res) => {
 
-  axios.get(`http://localhost:3004${req.url}`)
+  axios.get(`http://ec2-54-212-185-70.us-west-2.compute.amazonaws.com:80${req.url}`)
     .then(({data}) => res.send(data))
     .then((err) => res.send(err));
 });
